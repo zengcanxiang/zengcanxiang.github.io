@@ -70,4 +70,4 @@ theme: spfk
 deploy:
   type: git
   repository: https://github.com/zengcanxiang/zengcanxiang.github.io.git
-  branch: hexo-html-file
+  branch: master
