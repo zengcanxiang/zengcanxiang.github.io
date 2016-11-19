@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: zenngcx'blog
-subtitle:
+title: zengCx'Blog
+subtitle: 原谅我这一生放荡不羁爱自由
 description:
 author: 曾灿祥
 language: zh-CN
@@ -57,9 +57,14 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 5
 pagination_dir: page
 
+#admin配置
+admin:
+  username: zengcanxiang
+  password_hash: $2a$08$VyOiDC8h9KhwfIN1DBP4.upLpHSwaW436oXbNL42dDMsS0knIR4q.
+  secret: me admin site
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
