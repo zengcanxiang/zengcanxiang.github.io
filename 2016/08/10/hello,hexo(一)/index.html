@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>hello，hexo(一) | zengCx&#39;Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="好记性不如烂笔头,作为一个Android从业人员在搭建和学习hexo过程中积累了一些知识.因为折腾过hexo两次,第一次自信满满记住的知识全部忘记了,吸取教训.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hello，hexo(一)">
+<meta property="og:url" content="http://zengcanxiang.github.io/2016/08/10/hello,hexo(一)/index.html">
+<meta property="og:site_name" content="zengCx'Blog">
+<meta property="og:description" content="好记性不如烂笔头,作为一个Android从业人员在搭建和学习hexo过程中积累了一些知识.因为折腾过hexo两次,第一次自信满满记住的知识全部忘记了,吸取教训.">
+<meta property="og:updated_time" content="2016-11-16T12:46:33.644Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hello，hexo(一)">
+<meta name="twitter:description" content="好记性不如烂笔头,作为一个Android从业人员在搭建和学习hexo过程中积累了一些知识.因为折腾过hexo两次,第一次自信满满记住的知识全部忘记了,吸取教训.">
+  
+    <link rel="alternative" href="/atom.xml" title="zengCx&#39;Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: true
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">曾灿祥</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">原谅我这一生放荡不羁爱自由</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/zengcanxiang" title="github">github</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="http://www.linkedin.com/pulse/activities/%E7%81%BF%E7%A5%A5-%E6%9B%BE+0_38Md2VIZ8veg1qlaaox8NW?trk=nav_responsive_sub_nav_yourupdates" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/hello/" style="font-size: 20px;">hello</a> <a href="/tags/折腾/" style="font-size: 10px;">折腾</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://zengcanxiang.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">菩萨畏因,众生畏果.</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">曾灿祥</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">曾灿祥</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">原谅我这一生放荡不羁爱自由</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/zengcanxiang" title="github">github</a>
+                    
+                        <a class="linkedin" target="_blank" href="http://www.linkedin.com/pulse/activities/%E7%81%BF%E7%A5%A5-%E6%9B%BE+0_38Md2VIZ8veg1qlaaox8NW?trk=nav_responsive_sub_nav_yourupdates" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-hello,hexo(一)" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/10/hello,hexo(一)/" class="article-date">
+      <time datetime="2016-08-09T16:00:00.000Z" itemprop="datePublished">2016-08-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hello，hexo(一)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/">hello</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>　好记性不如烂笔头,作为一个Android从业人员在搭建和学习hexo过程中积累了一些知识.因为折腾过hexo两次,第一次自信满满记住的知识全部忘记了,吸取教训.　　<br><a id="more"></a></p>
+<p>　在网上了解到hexo博客系统之后，蠢蠢欲动的给自己弄了一个，虽然感觉自己弄的这个系统比较一般，没有达到自己预期能够搭建的效果，但是也学到不少经验。</p>
+<h1 id="我的基础认知"><a href="#我的基础认知" class="headerlink" title="我的基础认知"></a>我的基础认知</h1><h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>　随着互联网的发展,博客这个词就越来越深入民间了.它的正式名称为网络日志；又音译为部落格或部落阁等，是一种通常由个人管理、不定期张贴新的文章的网站.  </p>
+<p>　大部分的博客内容以文字为主，仍有一些博客专注在艺术、摄影、视频、音乐、播客等各种主题，这就让博客的受众面不会有太大的局限.  </p>
+<p>　对技术人员来说，大家熟知的,“CSDN技术博客”，我觉得像黑夜中的海岸灯塔。在早期的学习过程中,应该没有人说没在上面了解过迷惑的知识点或者找到项目中的bug解决方案吧.</p>
+<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><p>　一个完整，功能齐全的博客系统是很厉害的,支持渲染、编辑、排版等一系列不明觉厉的功能。所以之前大行其道的博客全部是个人使用企业提供的功能。但是这样的话，页面自定义和以前的HTML编辑器排版等问题总是会让很多人接受不了.</p>
+<p>　但是程序员们总是充满了Geek精神,从动态博客到静态博客,从HTML排版到markdown语言等等,中间的变化无疑比得上文艺复兴~~  </p>
+<p>　随着技术的提高，在网上学习的地方更多的由CSDN转向Github，从技术论坛到微信公众号，从企业博客到个人博客。</p>
+<p>　就这样的的环境下，我接触到了hexo，一个大学生的作品。 d=====(￣▽￣)b。</p>
+<h1 id="hexo基础搭建"><a href="#hexo基础搭建" class="headerlink" title="hexo基础搭建"></a>hexo基础搭建</h1><h2 id="基础环境"><a href="#基础环境" class="headerlink" title="基础环境"></a>基础环境</h2><p>　hexo在实际应用过程我，我认为应该是属于前端范畴。使用环境也差不多，我安装了:git、node.js、markdown编辑器、python2.7. 就在那个时候，我知道了前端还可以写客户端，写后台，写APP。。。。，心里那个我屮艸芔茻啊。  </p>
+<p>　环境安装没什么说的，一个入门程序员就会安装，网上教程一搜一大把.</p>
+<h2 id="hexo配置"><a href="#hexo配置" class="headerlink" title="hexo配置"></a>hexo配置</h2><h3 id="启动hexo"><a href="#启动hexo" class="headerlink" title="启动hexo"></a>启动hexo</h3><p>　任何技术最重要的教程就是官网.作为Android开发者，Android Developers是我们的导航灯(虽然我根本看不懂他在讲什么~)。但是我们早期接触到的翻译文章，到前一段时间youtube上的系列教程以及Android性能优化等系列文章，最初的起源还是Android Developers。</p>
+<p>　所以，hexo一开始我就是照着<a href="https://hexo.io/" target="_blank" rel="external">官网</a>来的,更不用说他的开发者是台湾人，有<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">中文文档</a>~</p>
+<p>　 在win环境下,在自己想要的目录下右键使用Git Bash。(推荐步骤:首先在Github上创建项目，同步电脑和Github的项目之后再初始化。)</p>
+<p>　使用<a href="http://www.runoob.com/nodejs/nodejs-npm.html" target="_blank" rel="external">npm</a>安装hexo.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure></p>
+<p>　等到安装完成，就可以在Git Base界面执行hexo命令了.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo init <span class="comment">//初始化</span></div><div class="line">npm install <span class="comment">//安装hexo需要的包</span></div></pre></td></tr></table></figure></p>
+<p>然后就可以 使用”hexo g s”,当看到下面的提示的时候，就代表可以在浏览器的4000看到初始hexo界面了.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">INFO  Start processing</div><div class="line">INFO  Hexo is running at http:<span class="comment">//localhost:4000/. Press Ctrl+C to stop.</span></div></pre></td></tr></table></figure></p>
+<h3 id="变量配置"><a href="#变量配置" class="headerlink" title="变量配置"></a>变量配置</h3><p>　hexo作为一个静态网站，大部分配置应该都是从目录下一个叫_config.yml 文件读取的。从名字就知道。config的的yml文件.<br>　在这之前，我只知道有xml文件~又学到不少:一种直观的能够被电脑识别的的数据数据序列化格式，并且容易被人类阅读，容易和脚本语言交互的，可以被支持YAML库的不同的编程语言程序导入，比如： C/C++, Ruby, Python, Java, Perl, C#, PHP等.<br>　常见的就不记录了，官网上也又讲解。主要记录一下，一些比较个人的配置。<br>　因为使用Git来保管这个项目，就在分支上保存源码，在主干上展示编译出来的网址文件. “deploy”配置就显得很重要.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git 项目类型</div><div class="line">  repository:  项目git路径</div><div class="line">  branch: 分支名</div></pre></td></tr></table></figure></p>
+<p>　theme:使用themes文件下的那个主题</p>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>　主题就是衣服，设计师太多，geek程序员太多.这里只记录我使用的<a href="https://github.com/luuman/hexo-theme-spfk" target="_blank" rel="external">主题</a>(hexo-theme-spfk)的一些配置.<br>　主题的配置同样是主题名文件夹下面的_config.yml文件.<br>　menu:左侧菜单选项。这里可以配置首页或者其他模块,但是首页路径要和hexo的_config里面的root对应.<br>　avatar:按照这个配置的值去主题img目录下替换掉图片,或者更换图片和这里配置的值.<br>　subnav:配置自己社交地址.<br>　duoshuo:多说评论系统配置.<br>　google_site、baidu_site:谷歌和百度的站长配置,因为之前没有成功将自己的网站让两个搜索引擎收录,加上碰上项目赶,这个就一直放在这里,下次再去完善.<br>　因为这个主题配置里面注释比较多,就记录到这里.</p>
+<h3 id="域名配置"><a href="#域名配置" class="headerlink" title="域名配置"></a>域名配置</h3><p>　一开始,搭建在Github.io服务上的博客,需要通过username.github.io来访问，后来在网上搜索到可以使用CNAME文件来配置,我就把他放在了pubic文件夹下面，结果没部署一次我就得放一次.如果我第一次搭建博客的时候，能够了解到文件夹的作用,就不会犯这个错误了(public文件夹是放置生成的html以及相关网站的).  \<br>　CNAME里面只要放上一句就可以了, 例如:www.zengcanxiang.cn</p>
+<hr>
+<p>　</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/08/10/hello,hexo(一)/">hello，hexo(一)</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 曾灿祥 的个人博客">曾灿祥</a></p>
+        <p><span>发布时间:</span>2016年08月10日 - 00时00分</p>
+        <p><span>最后更新:</span>2016年11月16日 - 20时46分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/10/hello,hexo(一)/" title="hello，hexo(一)">http://zengcanxiang.github.io/2016/08/10/hello,hexo(一)/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zengcanxiang.github.io/2016/08/10/hello,hexo(一)/　　作者: 曾灿祥" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2016/08/20/hello,network(一)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          hello，network(一)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/08/04/hello,blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hello，blog</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#我的基础认知"><span class="toc-number">1.</span> <span class="toc-text">我的基础认知</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#博客"><span class="toc-number">1.1.</span> <span class="toc-text">博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo"><span class="toc-number">1.2.</span> <span class="toc-text">hexo</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo基础搭建"><span class="toc-number">2.</span> <span class="toc-text">hexo基础搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础环境"><span class="toc-number">2.1.</span> <span class="toc-text">基础环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo配置"><span class="toc-number">2.2.</span> <span class="toc-text">hexo配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#启动hexo"><span class="toc-number">2.2.1.</span> <span class="toc-text">启动hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量配置"><span class="toc-number">2.2.2.</span> <span class="toc-text">变量配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主题"><span class="toc-number">2.2.3.</span> <span class="toc-text">主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#域名配置"><span class="toc-number">2.2.4.</span> <span class="toc-text">域名配置</span></a></li></ol></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/08/10/hello,hexo(一)/" data-title="hello，hexo(一)" data-url="http://zengcanxiang.github.io/2016/08/10/hello,hexo(一)/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zengcanxiang"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/08/20/hello,network(一)/" title="上一篇: hello，network(一)">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/08/04/hello,blog/" title="下一篇: hello，blog">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/20/hello,network(一)/">hello，network(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/hello,hexo(一)/">hello，hexo(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/04/hello,blog/">hello，blog</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 曾灿祥
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >大爷来玩数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">被翻牌数: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
