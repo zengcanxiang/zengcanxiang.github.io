@@ -3,9 +3,9 @@ date:
   - 2016-8-10
 tags:
     - HTML
-    - hello
     - 笔记
     - 折腾
+    - hello
 title: hello，hexo(一)
 ---
 　好记性不如烂笔头,作为一个Android从业人员在搭建和学习hexo过程中积累了一些知识.因为折腾过hexo两次,第一次自信满满记住的知识全部忘记了,吸取教训.　　
