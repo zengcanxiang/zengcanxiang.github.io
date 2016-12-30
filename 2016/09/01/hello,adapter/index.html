@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>hello，adapter | zengCx&#39;Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Android适配器使用经验总结.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hello，adapter">
+<meta property="og:url" content="http://zengcanxiang.github.io/2016/09/01/hello,adapter/index.html">
+<meta property="og:site_name" content="zengCx'Blog">
+<meta property="og:description" content="Android适配器使用经验总结.">
+<meta property="og:image" content="http://o6y6mbc2m.bkt.clouddn.com/Animation.gif">
+<meta property="og:updated_time" content="2016-12-12T13:00:29.667Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hello，adapter">
+<meta name="twitter:description" content="Android适配器使用经验总结.">
+<meta name="twitter:image" content="http://o6y6mbc2m.bkt.clouddn.com/Animation.gif">
+  
+    <link rel="alternative" href="/atom.xml" title="zengCx&#39;Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: true
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">曾灿祥</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">原谅我这一生放荡不羁爱自由</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/zengcanxiang" title="github">github</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="http://www.linkedin.com/pulse/activities/%E7%81%BF%E7%A5%A5-%E6%9B%BE+0_38Md2VIZ8veg1qlaaox8NW?trk=nav_responsive_sub_nav_yourupdates" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Android/" style="font-size: 13.33px;">Android</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/hello/" style="font-size: 20px;">hello</a> <a href="/tags/折腾/" style="font-size: 10px;">折腾</a> <a href="/tags/笔记/" style="font-size: 16.67px;">笔记</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://zengcanxiang.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">菩萨畏因,众生畏果.</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">曾灿祥</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">曾灿祥</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">原谅我这一生放荡不羁爱自由</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/zengcanxiang" title="github">github</a>
+                    
+                        <a class="linkedin" target="_blank" href="http://www.linkedin.com/pulse/activities/%E7%81%BF%E7%A5%A5-%E6%9B%BE+0_38Md2VIZ8veg1qlaaox8NW?trk=nav_responsive_sub_nav_yourupdates" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-hello,adapter" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/01/hello,adapter/" class="article-date">
+      <time datetime="2016-08-31T16:00:00.000Z" itemprop="datePublished">2016-09-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hello，adapter
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/">hello</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>Android适配器使用经验总结.<br><a id="more"></a></p>
+<h2 id="BaseAdapter"><a href="#BaseAdapter" class="headerlink" title="BaseAdapter"></a>BaseAdapter</h2><p>　如果问我们Android开发人员使用的控件最多的是那一个？可能答案有很多种,几分天下,但是我想，ListView应该是其中的霸主吧.<br>　从一开始敲出的”Hello,word!”到绚丽的APP,中间,我们经历了多少的ListView?写了多少的Adapter?<br>　想想，那些成长的日子,越写越简单的Adapter,越来越流畅的ListView,是多好的见证.<br>　庆幸,我比较早的碰上了<a href="https://github.com/hongyangAndroid/" target="_blank" rel="external">hongyang</a>的base-adapter-helper.</p>
+<ul>
+<li><a href="http://www.imooc.com/learn/372" target="_blank" rel="external">视频</a></li>
+<li><a href="https://github.com/hongyangAndroid/base-adapter-helper" target="_blank" rel="external">Github项目</a></li>
+<li><a href="http://a.codekk.com/detail/Android/hongyangAndroid/BaseAdapterHelper%20%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90" target="_blank" rel="external">源码分析文章</a></li>
+</ul>
+<p>　当我还在一遍又一遍重写BaseAdapter的getCount、getItem、getItemId等方法，一遍又一遍的在getView方法里面inflate Layout,一遍又一遍的将ViewHolder setTag,getTag.在一开始走上自学不久的时候，就看到了很精彩的内容.<br>　新手自然推荐看视频,洋神的声音还带点磁性~当初在一通乱点的视频中,我就是因为这个声音而停下了脚步.<br>　因为也是算是学习笔记，就直接从自身出发了. 关于baseAdapter不管是洋神的视频还是文章都不知道比我的水平高出多少了.<br>　我维护了一个项目在Github上面，是关于Adapter.在有别人的项目的时候，我为什么要自己写一个呢。  </p>
+<ul>
+<li>第一点，当初这个项目是为了照着视频上打的,学习的而产生的.一开始,洋神并不会把代码放出来,自然只能自己手敲,不停的踏入无数的坑中.但是，这样才不会让更多的人变成伸手党.感谢洋神~  </li>
+<li>第二点，洋神的代码与我的代码规范或者思路有点不同，为了成长，我要实现自己的思路，并且改进他.才不会写出想当然的代码，也能更清晰的了解洋神代码的思路和设计.</li>
+<li>第三点，当初在RecyclerView出来的时候，洋神并没有出视频或者更新代码，就自己尝试写了。并且，有区别于别人的Adapter项目的是，我自己琢磨写了ExpandableListView、ViewPager的BaseAdapter.  </li>
+</ul>
+<p>　然后介绍一下我的思路.</p>
+<ul>
+<li>我将代码通过包名来分层,一般直接继承的叫—BaseAdapter,继承自定义的BaseAdapter,为他添加简便方法的叫HelperAdapter.导入的时候，通过import语句来区分.<br>而且将HelperAdapter和BaseAdapter区分开来，假如需要自己来实现一些特殊的代码，也不会需要导入源码来修改.我个人不喜欢出现很长名字的方法和类名，这样也避免了出现很多乱七八糟的类名.</li>
+<li>第二个思路就是多子布局的设计.这个完全就是自己设计的,一开始洋神的视频和代码都没有提到这个,即使是后来更新了代码，也是完全不一样的想法和思路.<br>　　产生了这个想法,也是因为当时公司的项目有一个界面,itemType比较复杂,实现效果时写了很多if-else-if 的丑陋代码.虽然后来出现了很多多子布局BaseAdapter.但是我比较了代码和提交时间，采取int…和复写父类方法来动态配置layoutId,我应该是走的比较早.<br>　　因为这个想法，是通过学习V4-Support的SwipeRefreshLayout设置圆形圈颜色而产生的.这对我来说,使我的编程能力得到了成长(并不是编码能力).</li>
+</ul>
+<p>　先给大家看一下效果.毕竟无图那个是吧。<br>　<img src="http://o6y6mbc2m.bkt.clouddn.com/Animation.gif" alt="示例"></p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>下面通过一些代码来简单介绍一下如何使用.因为代码使用规范差不多，重复的就不一一贴出来了.</p>
+<h3 id="普通absListView"><a href="#普通absListView" class="headerlink" title="普通absListView"></a>普通absListView</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> com.zengcanxiang.baseAdapter.absListView.HelperAdapter;</div><div class="line"><span class="keyword">import</span> com.zengcanxiang.baseAdapter.absListView.HelperViewHolder;</div><div class="line"></div><div class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ExampleListAdapter</span> <span class="keyword">extends</span> <span class="title">HelperAdapter</span>&lt;<span class="title">String</span>&gt; </span>&#123;</div><div class="line"></div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="title">ExampleListAdapter</span><span class="params">(List&lt;String&gt; mList, Context context, <span class="keyword">int</span>... layoutIds)</span> </span>&#123;</div><div class="line">          <span class="keyword">super</span>(mList, context, layoutIds);</div><div class="line">          <span class="comment">//这样是处理不需要动态配置layoutId的情况，多个也可如此配置</span></div><div class="line">          <span class="comment">//super(mList, context, R.layot.xxxx，R.layout.xxxx);</span></div><div class="line"></div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="meta">@Override</span></div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">HelpConvert</span><span class="params">(HelperViewHolder viewHolder, <span class="keyword">int</span> position, String s)</span> </span>&#123;</div><div class="line"></div><div class="line">      &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h4 id="多子布局的recyclerView"><a href="#多子布局的recyclerView" class="headerlink" title="多子布局的recyclerView"></a>多子布局的recyclerView</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> com.zengcanxiang.baseAdapter.recyclerView.HelperAdapter;</div><div class="line"><span class="keyword">import</span> com.zengcanxiang.baseAdapter.recyclerView.HelperViewHolder;</div><div class="line"></div><div class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ExampleRecyAdapter</span> <span class="keyword">extends</span> <span class="title">HelperAdapter</span>&lt;<span class="title">Msg</span>&gt; </span>&#123;</div><div class="line">       <span class="function"><span class="keyword">public</span> <span class="title">ExampleRecyAdapter</span><span class="params">(List&lt;Msg&gt; data, Context context)</span> </span>&#123;</div><div class="line">           <span class="keyword">super</span>(data, context, R.layout.example_exrecycler_1,R.layout.example_recycler_2);</div><div class="line">       &#125;</div><div class="line">       <span class="meta">@Override</span></div><div class="line">       <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">HelperBindData</span><span class="params">(HelperViewHolder viewHolder, <span class="keyword">int</span> position, Msg item)</span> </span>&#123;</div><div class="line">           <span class="keyword">switch</span> (item.getType()) &#123;</div><div class="line">               <span class="keyword">case</span> <span class="number">0</span>:</div><div class="line">                   <span class="keyword">break</span>;</div><div class="line">               <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">                   <span class="keyword">break</span>;</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       <span class="meta">@Override</span></div><div class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">checkLayoutIndex</span><span class="params">(Msg item, <span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">           <span class="comment">/**</span></div><div class="line">            * 多子布局样式重写checkLayout()方法，返回对应的index</div><div class="line">            * 本例子因为msg的Type对应的就是0和1,所以就直接返回msgType</div><div class="line">            */</div><div class="line">           <span class="keyword">return</span> item.getType();</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<h4 id="普通expandableListView"><a href="#普通expandableListView" class="headerlink" title="普通expandableListView"></a>普通expandableListView</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> com.zengcanxiang.baseAdapter.absListView.HelperViewHolder;</div><div class="line"><span class="keyword">import</span> com.zengcanxiang.baseAdapter.expandableListView.HelperAdapter;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line">*标题数据与子数据在一个实体</div><div class="line">*/</div><div class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ExampleAdapter</span> <span class="keyword">extends</span> <span class="title">HelperAdapter</span>&lt;<span class="title">Msg</span>&gt; </span>&#123;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="title">ExampleAdapter</span><span class="params">(List&lt;List&lt;Msg&gt;&gt; data, Context context, <span class="keyword">int</span>[] groupLayoutIds, <span class="keyword">int</span>... childLayoutIds)</span> </span>&#123;</div><div class="line">            <span class="keyword">super</span>(data, context, groupLayoutIds, childLayoutIds);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">HelpConvertGroup</span><span class="params">(HelperViewHolder viewHolder, <span class="keyword">int</span> groupPosition, List&lt;Msg&gt; childs)</span> </span>&#123;</div><div class="line">            viewHolder.setText(R.id.expandable_group, childs.get(<span class="number">0</span>).getGroupMsg());</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">HelpConvertChild</span><span class="params">(HelperViewHolder viewHolder, <span class="keyword">int</span> groupPosition, <span class="keyword">int</span> childPosition, Msg msg)</span> </span>&#123;</div><div class="line">            viewHolder.setText(R.id.example_item_text_view, msg.getMsg());</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line">*标题数据与子数据不在一个实体</div><div class="line">*/</div><div class="line"><span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">ExampleAdapter2</span> <span class="keyword">extends</span> <span class="title">HelperAdapter2</span>&lt;<span class="title">GroupMsg</span>, <span class="title">Msg</span>&gt; </span>&#123;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="title">ExampleAdapter2</span><span class="params">(List&lt;GroupMsg&gt; groupData, List&lt;List&lt;Msg&gt;&gt; childData, Context context, <span class="keyword">int</span>[] groupLayoutIds, <span class="keyword">int</span>... childLayoutIds)</span> </span>&#123;</div><div class="line">            <span class="keyword">super</span>(groupData, childData, context, groupLayoutIds, childLayoutIds);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">HelpConvertGroup</span><span class="params">(HelperViewHolder viewHolder, <span class="keyword">int</span> groupPosition, GroupMsg item, List&lt;Msg&gt; childs)</span> </span>&#123;</div><div class="line">            viewHolder.setText(R.id.expandable_group, item.getMsg());</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="meta">@Override</span></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">HelpConvertChild</span><span class="params">(HelperViewHolder viewHolder, <span class="keyword">int</span> groupPosition, <span class="keyword">int</span> childPosition, Msg msg)</span> </span>&#123;</div><div class="line">            viewHolder.setText(R.id.example_item_text_view, msg.getMsg());</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h4 id="ViewPager-使用view和使用fragment"><a href="#ViewPager-使用view和使用fragment" class="headerlink" title="ViewPager:使用view和使用fragment"></a>ViewPager:使用view和使用fragment</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> com.zengcanxiang.baseAdapter.viewpager.BaseAdapter;</div><div class="line"><span class="keyword">import</span> com.zengcanxiang.baseAdapter.viewpager.BaseFragmentAdapter;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ViewAdapter</span> <span class="keyword">extends</span> <span class="title">BaseAdapter</span> </span>&#123;</div><div class="line"></div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="title">ViewAdapter</span><span class="params">(Context context)</span> </span>&#123;</div><div class="line">          <span class="keyword">super</span>(context, R.layout.example_viewpager_one,R.layout.example_viewpager_two,R.layout.example_viewpager_three);</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="meta">@Override</span></div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">convert</span><span class="params">(View view, <span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line"></div><div class="line">      &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FragmentAdapter</span> <span class="keyword">extends</span> <span class="title">BaseFragmentAdapter</span> </span>&#123;</div><div class="line"></div><div class="line">      <span class="function"><span class="keyword">public</span> <span class="title">FragmentAdapter</span><span class="params">(FragmentManager fm, @NonNull List&lt;Fragment&gt; fragments)</span> </span>&#123;</div><div class="line">          <span class="keyword">super</span>(fm, fragments);</div><div class="line">      &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h4 id="headFootViewAdapter-RecyclerView"><a href="#headFootViewAdapter-RecyclerView" class="headerlink" title="headFootViewAdapter(RecyclerView)"></a>headFootViewAdapter(RecyclerView)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> com.zengcanxiang.baseAdapter.recyclerView.HeadFootAdapter;</div><div class="line"></div><div class="line">MyRecyerAdapter mAdapter = <span class="keyword">new</span> MyRecyerAdapter(mList, <span class="keyword">this</span>, R.layout.example_item);</div><div class="line">HeadFootAdapter headFootAdapter = <span class="keyword">new</span> HeadFootAdapter(mAdapter) &#123;</div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">disposeHeadView</span><span class="params">(HelperViewHolder viewHolder, <span class="keyword">int</span> layoutId, <span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="meta">@Override</span></div><div class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">disposeFootView</span><span class="params">(HelperViewHolder viewHolder, View footView, <span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line"><span class="comment">//注意：推荐head或者foot不是listView或者之类的列表控件</span></div><div class="line"><span class="comment">//如果超出一屏的话，将他们分割开来，不要一次性写入到一个xml中</span></div><div class="line">headFootAdapter.addHeadView(R.layout.list_head_home);</div></pre></td></tr></table></figure>
+<p>好了，就介绍到这里,程序员的世界还是用代码说话吧.<a href="https://github.com/zengcanxiang/BaseAdapter" target="_blank" rel="external">传送门</a></p>
+<hr>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/09/01/hello,adapter/">hello，adapter</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 曾灿祥 的个人博客">曾灿祥</a></p>
+        <p><span>发布时间:</span>2016年09月01日 - 00时00分</p>
+        <p><span>最后更新:</span>2016年12月12日 - 21时00分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/01/hello,adapter/" title="hello，adapter">http://zengcanxiang.github.io/2016/09/01/hello,adapter/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zengcanxiang.github.io/2016/09/01/hello,adapter/　　作者: 曾灿祥" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/08/20/hello,network(一)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hello，network(一)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#BaseAdapter"><span class="toc-number">1.</span> <span class="toc-text">BaseAdapter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方法"><span class="toc-number">2.</span> <span class="toc-text">使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通absListView"><span class="toc-number">2.1.</span> <span class="toc-text">普通absListView</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#多子布局的recyclerView"><span class="toc-number">2.1.1.</span> <span class="toc-text">多子布局的recyclerView</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#普通expandableListView"><span class="toc-number">2.1.2.</span> <span class="toc-text">普通expandableListView</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ViewPager-使用view和使用fragment"><span class="toc-number">2.1.3.</span> <span class="toc-text">ViewPager:使用view和使用fragment</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#headFootViewAdapter-RecyclerView"><span class="toc-number">2.1.4.</span> <span class="toc-text">headFootViewAdapter(RecyclerView)</span></a></li></ol></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/09/01/hello,adapter/" data-title="hello，adapter" data-url="http://zengcanxiang.github.io/2016/09/01/hello,adapter/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"zengcanxiang"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/08/20/hello,network(一)/" title="下一篇: hello，network(一)">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/01/hello,adapter/">hello，adapter</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/20/hello,network(一)/">hello，network(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/10/hello,hexo(一)/">hello，hexo(一)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/04/hello,blog/">hello，blog</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 曾灿祥
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >大爷来玩数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">被翻牌数: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
